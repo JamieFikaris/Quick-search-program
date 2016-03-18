@@ -59,8 +59,6 @@ namespace Dads_Program
                         continue;
                 }
                 text.Close();
-
-                //MessageBox.Show(fn);
             }
 
             if (foundStuff.Count == 0)
@@ -69,14 +67,5 @@ namespace Dads_Program
             }
 
         }
-
-        private void display() //for testing
-        {
-            foreach(string text in foundStuff)
-            {
-                MessageBox.Show(text);
-            }
-        }
-
     }
 }
