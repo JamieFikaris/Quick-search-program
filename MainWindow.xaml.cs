@@ -27,11 +27,14 @@ namespace Dads_Program
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            string input = textBox.Text;
-            Functions a = new Functions(input);
-            a.read();
+            Functions FunctionClass = new Functions();
+            FunctionClass.Input = textBox.Text;
+            FunctionClass.createFolder();
+            FunctionClass.readAndSearch();
             
-            foreach (string text in a.foundStuff)
+            List<string> foundLines = a.MyList; //set new list to foundStuff list from Class
+
+            foreach (string text in foundLines)
             {
                 listBox.Items.Add(text);
             }
